@@ -1,0 +1,41 @@
+---
+import LiItem from '../moleculas/LiItem.astro'
+import Logo from '../atoms/Logo.astro'
+const months = [
+  'Enero',
+  'Febrero',
+  'Marzo',
+  'Abril',
+  'Mayo',
+  'Junio',
+  'Julio',
+  'Agosto',
+  'Septiembre',
+  'Octubre',
+  'Noviembre',
+  'Diciembre'
+]
+const date = new Date()
+const year = date.getFullYear()
+const month = months[date.getMonth()]
+const day = date.getDate()
+---
+<asaid class="flex left-0 h-screen w-[300px] items-center py-2 bg-neutral-800 text-white fixed">
+  <div class="container flex flex-col items-center justify-between h-[calc(100vh-10rem)]">
+    <div>
+      <Logo />
+    </div>
+    <nav>
+      <ul class="flex flex-col space-x-4 h-auto gap-4">
+        <LiItem href="/" text="Home" />
+        <LiItem href="/subjects" text="About" />
+        <LiItem href="/about" text="About" />
+        <LiItem href="/about" text="About" />
+      </ul>
+    </nav>
+    <section>
+      <p>Hola <span class="text-sky-700">Samuel</span></p>
+      <p>{year}{month}{day}</p>
+    </section>
+  </div>
+</asaid>

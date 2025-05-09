@@ -1,0 +1,6 @@
+---
+import Links from '../atoms/Links.astro'
+const { href, text} = Astro.props
+---
+
+<li class="group w-6 bg-sky-950 pl-1 hover:bg-white transition rounded-sm"><Links href={href} text={text} /></li>
